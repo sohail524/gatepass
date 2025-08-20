@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-20 11:48:29.275539",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "gate_pass_id",
+  "pass_type",
+  "employee",
+  "approved_by",
+  "visitor_name",
+  "room_no",
+  "vehicle_no",
+  "purpose",
+  "column_break_cdte",
+  "department",
+  "floor",
+  "issue_date",
+  "return_date",
+  "status",
+  "section_break_inyh",
+  "item_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "gate_pass_id",
+   "fieldtype": "Data",
+   "label": "Gate Pass ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pass_type",
+   "fieldtype": "Select",
+   "label": "Pass Type",
+   "options": "IN\nOUT"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "visitor_name",
+   "fieldtype": "Data",
+   "label": "Visitor Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "item_details",
+   "fieldtype": "Table",
+   "label": "Item Details",
+   "options": "Gate Pass Item"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Select",
+   "label": "Floor",
+   "options": "Ground Floor\nFirst Floor\nSecond Floor\nThird Floor"
+  },
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "label": "Room Number"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Datetime",
+   "label": "Issue Date"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Datetime",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nIn\nOut\nClosed"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_cdte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_inyh",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-20 12:12:56.338927",
+ "modified_by": "Administrator",
+ "module": "gatepass",
+ "name": "Gate Pass",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
