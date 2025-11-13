@@ -6,21 +6,23 @@
  "engine": "InnoDB",
  "field_order": [
   "gate_pass_id",
-  "pass_type",
   "employee",
-  "approved_by",
   "visitor_name",
+  "pass_type",
   "room_no",
   "vehicle_no",
   "purpose",
   "column_break_cdte",
   "department",
+  "supplier",
+  "status",
+  "approved_by",
   "floor",
   "issue_date",
   "return_date",
-  "status",
   "section_break_inyh",
-  "item_details"
+  "item_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -108,12 +110,29 @@
   {
    "fieldname": "section_break_inyh",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gate Pass",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-08-20 12:12:56.338927",
+ "modified": "2025-11-11 12:20:43.424676",
  "modified_by": "Administrator",
  "module": "gatepass",
  "name": "Gate Pass",
