@@ -28,10 +28,7 @@ frappe.query_reports["Gate Pass Report"] = {
             fieldname: "from_date",
             label: __("From Date"),
             fieldtype: "Date",
-            default: frappe.datetime.add_months(
-                frappe.datetime.get_today(),
-                -1
-            ),
+            default: frappe.datetime.add_months(frappe.datetime.get_today(), -1),
             description: "Start date of the report range"
         },
         {
@@ -48,6 +45,13 @@ frappe.query_reports["Gate Pass Report"] = {
             options: "\nApproved\nRejected\nPending",
             default: "",
             width: 150
+        },
+        {
+            fieldname: "purpose",
+            label: __("Purpose"),
+            fieldtype: "Data",
+            width: 200,
+            description: "Filter by purpose of gate pass"
         }
     ]
 };
