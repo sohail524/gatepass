@@ -3,7 +3,7 @@
 
 /**
  * Gate Pass Report
- * Updated: Minor improvements + Added Gate Pass Type filter
+ * Update: Added Vehicle No filter + label improvements
  */
 
 frappe.query_reports["Gate Pass Report"] = {
@@ -23,6 +23,12 @@ frappe.query_reports["Gate Pass Report"] = {
             width: 180
         },
         {
+            fieldname: "vehicle_no",
+            label: __("Vehicle No"),
+            fieldtype: "Data",
+            width: 180
+        },
+        {
             fieldname: "from_date",
             label: __("From Date"),
             fieldtype: "Date",
@@ -36,7 +42,7 @@ frappe.query_reports["Gate Pass Report"] = {
         },
         {
             fieldname: "status",
-            label: __("Gate Pass Status"),
+            label: __("Status"),
             fieldtype: "Select",
             options: ["", "Approved", "Rejected", "Pending"].join("\n"),
             width: 150
