@@ -3,7 +3,7 @@
 
 /**
  * Gate Pass Report
- * Update: Added Employee Name filter + small UI refinements
+ * Update #3: Added Created By filter + layout cleanup
  */
 
 frappe.query_reports["Gate Pass Report"] = {
@@ -13,7 +13,7 @@ frappe.query_reports["Gate Pass Report"] = {
             label: __("Employee ID"),
             fieldtype: "Link",
             options: "Employee",
-            width: 180
+            width: 160
         },
         {
             fieldname: "employee_name",
@@ -26,7 +26,14 @@ frappe.query_reports["Gate Pass Report"] = {
             label: __("Department"),
             fieldtype: "Link",
             options: "Department",
-            width: 180
+            width: 160
+        },
+        {
+            fieldname: "created_by",
+            label: __("Created By (User)"),
+            fieldtype: "Link",
+            options: "User",
+            width: 160
         },
         {
             fieldname: "vehicle_no",
@@ -51,14 +58,14 @@ frappe.query_reports["Gate Pass Report"] = {
             label: __("Status"),
             fieldtype: "Select",
             options: ["", "Approved", "Rejected", "Pending"].join("\n"),
-            width: 140
+            width: 130
         },
         {
             fieldname: "gate_pass_type",
             label: __("Gate Pass Type"),
             fieldtype: "Select",
             options: ["", "In", "Out"].join("\n"),
-            width: 140
+            width: 130
         },
         {
             fieldname: "purpose",
